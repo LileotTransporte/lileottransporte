@@ -171,12 +171,22 @@
 }
 
 @utility grid-lines {
-  background-image:
-    linear-gradient(oklch(1 0 0 / 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, oklch(1 0 0 / 0.045) 1px, transparent 1px);
-  background-size: 44px 44px;
-  mask-image: radial-gradient(75% 70% at 50% 25%, #000 30%, transparent 100%);
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+      linear-gradient(oklch(1 0 0 / 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, oklch(1 0 0 / 0.05) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: radial-gradient(75% 70% at 50% 25%, #000 30%, transparent 100%);
+  }
 }
+
 
 @utility text-gradient {
   background: linear-gradient(
