@@ -5,17 +5,19 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Lileot design system — paleta original (azul #214f7c, rosa #f2a7c1, dourado #fbbf24)
- * convertida para oklch e distribuída em tokens semânticos.
+ * Lileot — Design System "Night Ride"
+ * Paleta original (azul #214f7c, azul escuro #163656, rosa #f2a7c1, dourado #fbbf24)
+ * reinterpretada em oklch sobre uma tela profunda com superfícies de vidro.
  */
 
 @theme inline {
-  --radius-sm: calc(var(--radius) - 6px);
-  --radius-md: calc(var(--radius) - 4px);
+  --radius-sm: calc(var(--radius) - 10px);
+  --radius-md: calc(var(--radius) - 6px);
   --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 6px);
-  --radius-2xl: calc(var(--radius) + 12px);
-  --radius-3xl: calc(var(--radius) + 18px);
+  --radius-xl: calc(var(--radius) + 8px);
+  --radius-2xl: calc(var(--radius) + 16px);
+  --radius-3xl: calc(var(--radius) + 26px);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -25,6 +27,7 @@
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-primary-dark: var(--primary-dark);
+  --color-ink: var(--ink);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-muted: var(--muted);
@@ -42,40 +45,60 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
-  --shadow-card: 0 12px 30px -8px oklch(0.38 0.08 250 / 0.14);
-  --shadow-lift: 0 22px 40px -12px oklch(0.38 0.08 250 / 0.24);
-  --shadow-soft: 0 2px 10px -4px oklch(0.38 0.08 250 / 0.16);
+
+  --shadow-soft: 0 2px 12px -6px oklch(0.1 0.04 252 / 0.6);
+  --shadow-card: 0 24px 50px -24px oklch(0.08 0.04 252 / 0.85);
+  --shadow-lift: 0 34px 70px -28px oklch(0.06 0.04 252 / 0.95);
+  --shadow-glow-accent: 0 18px 45px -18px oklch(0.799 0.086 355 / 0.65);
+  --shadow-glow-wa: 0 18px 45px -16px oklch(0.72 0.17 152 / 0.55);
+
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-rise: rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-pulse-ring: pulse-ring 2.6s ease-out infinite;
+  --animate-marquee: marquee 26s linear infinite;
 }
 
 :root {
-  --radius: 1rem;
-  --background: oklch(0.984 0.003 247.858);
-  --foreground: oklch(0.279 0.041 260.031);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.279 0.041 260.031);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.279 0.041 260.031);
+  --radius: 1.25rem;
+
+  --ink: oklch(0.19 0.045 252);
+  --background: oklch(0.19 0.045 252);
+  --foreground: oklch(0.975 0.008 250);
+
+  --card: oklch(0.245 0.05 252);
+  --card-foreground: oklch(0.975 0.008 250);
+  --popover: oklch(0.245 0.05 252);
+  --popover-foreground: oklch(0.975 0.008 250);
+
   --primary: oklch(0.401 0.083 251.5);
   --primary-foreground: oklch(1 0 0);
   --primary-dark: oklch(0.298 0.066 252.5);
-  --secondary: oklch(0.955 0.012 250);
-  --secondary-foreground: oklch(0.401 0.083 251.5);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.512 0.043 257.417);
+
+  --secondary: oklch(0.29 0.052 252);
+  --secondary-foreground: oklch(0.975 0.008 250);
+
+  --muted: oklch(0.28 0.05 252);
+  --muted-foreground: oklch(0.75 0.028 253);
+
   --accent: oklch(0.799 0.086 355);
-  --accent-foreground: oklch(0.298 0.066 252.5);
+  --accent-foreground: oklch(0.22 0.05 252);
   --accent-soft: oklch(0.949 0.023 354);
+
   --gold: oklch(0.834 0.157 83);
-  --silver: oklch(0.75 0.012 250);
-  --bronze: oklch(0.65 0.1 55);
+  --silver: oklch(0.82 0.012 250);
+  --bronze: oklch(0.68 0.11 55);
+
   --whatsapp: oklch(0.72 0.17 152);
-  --whatsapp-foreground: oklch(1 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
+  --whatsapp-foreground: oklch(0.15 0.04 155);
+
+  --destructive: oklch(0.62 0.22 27);
   --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.922 0.013 255.508);
-  --input: oklch(0.922 0.013 255.508);
-  --ring: oklch(0.401 0.083 251.5);
+
+  --border: oklch(0.98 0.01 250 / 0.12);
+  --input: oklch(0.98 0.01 250 / 0.16);
+  --ring: oklch(0.799 0.086 355);
 }
 
 @layer base {
@@ -85,31 +108,165 @@
 
   html {
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
   }
 
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
+    line-height: 1.55;
     -webkit-font-smoothing: antialiased;
-    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-accent-foreground);
   }
 }
 
-@utility surface-card {
-  background-color: var(--color-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-2xl);
-  box-shadow: var(--shadow-card);
-}
+/* ---------- Utilities ---------- */
 
-@utility tap-target {
+@utility tap {
   min-height: 44px;
   min-width: 44px;
 }
 
-/* Leaflet inside rounded card */
+@utility glass {
+  background: linear-gradient(
+    150deg,
+    oklch(1 0 0 / 0.09),
+    oklch(1 0 0 / 0.03) 55%,
+    oklch(1 0 0 / 0.06)
+  );
+  border: 1px solid oklch(1 0 0 / 0.1);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow-card);
+}
+
+@utility glass-soft {
+  background: oklch(1 0 0 / 0.06);
+  border: 1px solid oklch(1 0 0 / 0.09);
+  backdrop-filter: blur(14px);
+}
+
+@utility aurora {
+  position: relative;
+  isolation: isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -30% -20% auto -20%;
+    height: 70%;
+    z-index: -1;
+    background:
+      radial-gradient(60% 60% at 20% 30%, oklch(0.799 0.086 355 / 0.4), transparent 70%),
+      radial-gradient(55% 55% at 85% 10%, oklch(0.55 0.11 250 / 0.55), transparent 70%),
+      radial-gradient(45% 45% at 60% 70%, oklch(0.834 0.157 83 / 0.18), transparent 70%);
+    filter: blur(50px);
+    animation: var(--animate-float);
+  }
+}
+
+@utility grid-lines {
+  background-image:
+    linear-gradient(oklch(1 0 0 / 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(1 0 0 / 0.045) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(75% 70% at 50% 25%, #000 30%, transparent 100%);
+}
+
+@utility text-gradient {
+  background: linear-gradient(
+    100deg,
+    oklch(1 0 0),
+    oklch(0.899 0.06 355) 45%,
+    oklch(0.799 0.086 355)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility hairline {
+  border: 1px solid oklch(1 0 0 / 0.1);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, 18px, 0) scale(1.06);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 22px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 oklch(0.72 0.17 152 / 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 18px oklch(0.72 0.17 152 / 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 oklch(0.72 0.17 152 / 0);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Leaflet ajustado ao tema escuro */
 .leaflet-container {
   font-family: var(--font-sans);
   background: var(--color-muted);
+}
+
+.leaflet-tile-pane {
+  filter: saturate(0.8) contrast(0.95) brightness(0.86) hue-rotate(175deg) invert(0.92);
+}
+
+.leaflet-control-attribution,
+.leaflet-bar a {
+  background: oklch(0.19 0.045 252 / 0.85) !important;
+  color: oklch(0.85 0.02 250) !important;
+  border-color: oklch(1 0 0 / 0.12) !important;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: oklch(0.245 0.05 252);
+  color: oklch(0.975 0.008 250);
+  border-radius: 14px;
 }
