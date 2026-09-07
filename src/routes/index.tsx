@@ -458,7 +458,7 @@ function Index() {
                       </a>
                     </p>
                     <ul className="mt-3">
-                      {[
+                      {([
                         ["1º Lugar:", "R$ 300,00"],
                         ["2º Lugar:", "R$ 250,00"],
                         ["3º Lugar:", "R$ 200,00"],
