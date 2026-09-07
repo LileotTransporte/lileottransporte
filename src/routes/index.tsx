@@ -464,7 +464,7 @@ function Index() {
                         ["3º Lugar:", "R$ 200,00"],
                         ["4º Lugar:", "R$ 150,00"],
                         ["5º, 6º e 7º Lugar:", "R$ 100,00 cada"],
-                      ].map(([pos, valor]) => (
+                      ] as [string, string][]).map(([pos, valor]) => (
                         <PrizeRow
                           key={pos}
                           icon={<Ticket className="size-4 text-accent" aria-hidden />}
