@@ -621,12 +621,12 @@ function Index() {
           <div className="mt-6 flex flex-wrap justify-center gap-2.5">
             {[
               {
-                href: "https://www.instagram.com/lileot.transporte/",
+                href: "https://www.instagram.com/lileotlileot/",
                 label: "Instagram",
                 icon: <Instagram className="size-5" />,
               },
               {
-                href: "https://www.facebook.com/lileottransporte",
+                href: "https://www.facebook.com/lileotapp",
                 label: "Facebook",
                 icon: <Facebook className="size-5" />,
               },
