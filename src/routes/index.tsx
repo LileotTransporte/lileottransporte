@@ -500,12 +500,12 @@ function Index() {
                       </div>
                     </div>
                     <a
-                      href={WA_PASSAGEIRO}
+                      href={ehPassageiro ? APP_PASSAGEIRO : APP_MOTORISTA}
                       target="_blank"
                       rel="noreferrer"
                       className={`${btn} shrink-0 bg-foreground text-ink hover:scale-[1.02]`}
                     >
-                      Quero indicar <ArrowUpRight className="size-4" />
+                      Baixar App <ArrowUpRight className="size-4" />
                     </a>
                   </div>
                 </div>
