@@ -40,7 +40,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Viaje com conforto e segurança em Amparo e região. Baixe o app ou peça pelo WhatsApp (19) 98954-8149.",
+          "Viaje com conforto e segurança em Amparo e região. Baixe o app ou peça pelo WhatsApp (19) 99737-6030.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -49,8 +49,10 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const WA_PASSAGEIRO = "https://wa.me/19989548149";
-const WA_MOTORISTA = "https://wa.me/19997376030";
+// Links do WhatsApp Atualizados conforme Arquivo 2
+const WA_PASSAGEIRO = "https://wa.me/5519997376030";
+const WA_MOTORISTA = "https://wa.me/5519998188149";
+
 const APP_PASSAGEIRO =
   "https://play.google.com/store/apps/details?id=br.com.lileot.passenger.drivermachine";
 const APP_MOTORISTA =
@@ -202,7 +204,7 @@ function Index() {
             className="tap inline-flex items-center gap-2 rounded-full bg-accent px-4 py-2 text-xs font-extrabold text-accent-foreground shadow-glow-accent transition-transform duration-300 hover:scale-[1.03] sm:text-sm"
           >
             <MessageCircle className="size-4" aria-hidden />
-            <span className="hidden sm:inline">(19) 98954-8149</span>
+            <span className="hidden sm:inline">(19) 99737-6030</span>
             <span className="sm:hidden">Corrida</span>
           </a>
         </div>
@@ -454,17 +456,19 @@ function Index() {
                         rel="noreferrer"
                         className="font-bold text-foreground underline decoration-accent underline-offset-4"
                       >
-                        (19) 98954-8149
+                        (19) 99737-6030
                       </a>
                     </p>
                     <ul className="mt-3">
-                      {([
-                        ["1º Lugar:", "R$ 300,00"],
-                        ["2º Lugar:", "R$ 250,00"],
-                        ["3º Lugar:", "R$ 200,00"],
-                        ["4º Lugar:", "R$ 150,00"],
-                        ["5º, 6º e 7º Lugar:", "R$ 100,00 cada"],
-                      ] as [string, string][]).map(([pos, valor]) => (
+                      {(
+                        [
+                          ["1º Lugar:", "R$ 300,00"],
+                          ["2º Lugar:", "R$ 250,00"],
+                          ["3º Lugar:", "R$ 200,00"],
+                          ["4º Lugar:", "R$ 150,00"],
+                          ["5º, 6º e 7º Lugar:", "R$ 100,00 cada"],
+                        ] as [string, string][]
+                      ).map(([pos, valor]) => (
                         <PrizeRow
                           key={pos}
                           icon={<Ticket className="size-4 text-accent" aria-hidden />}
@@ -617,12 +621,12 @@ function Index() {
           <div className="mt-6 flex flex-wrap justify-center gap-2.5">
             {[
               {
-                href: "https://instagram.com/lileotlileot",
+                href: "https://www.instagram.com/lileot.transporte/",
                 label: "Instagram",
                 icon: <Instagram className="size-5" />,
               },
               {
-                href: "https://facebook.com/lileotapp",
+                href: "https://www.facebook.com/lileottransporte",
                 label: "Facebook",
                 icon: <Facebook className="size-5" />,
               },
@@ -633,7 +637,7 @@ function Index() {
               },
               { href: APP_PASSAGEIRO, label: "Play Store", icon: <Play className="size-5" /> },
               {
-                href: "https://www.youtube.com/@LileotTransporte",
+                href: "https://youtube.com/@lileottransporte",
                 label: "YouTube",
                 icon: <Youtube className="size-5" />,
               },
