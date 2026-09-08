@@ -50,7 +50,7 @@ export const Route = createFileRoute("/")({
 });
 
 // Links do WhatsApp Atualizados conforme Arquivo 2
-const WA_PASSAGEIRO = "https://wa.me/5519998188149";
+const WA_PASSAGEIRO = "https://wa.me/5519989548149";
 const WA_MOTORISTA = "https://wa.me/5519997376030";
 
 const APP_PASSAGEIRO =
