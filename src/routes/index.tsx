@@ -198,7 +198,7 @@ function Index() {
           </div>
 
           <a
-            href={WA_PASSAGEIRO}
+            href="(19)998188149"
             target="_blank"
             rel="noreferrer"
             className="tap inline-flex items-center gap-2 rounded-full bg-accent px-4 py-2 text-xs font-extrabold text-accent-foreground shadow-glow-accent transition-transform duration-300 hover:scale-[1.03] sm:text-sm"
