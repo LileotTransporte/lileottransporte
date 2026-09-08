@@ -198,13 +198,13 @@ function Index() {
           </div>
 
           <a
-            href="(19)998188149"
+            href={WA_PASSAGEIRO}
             target="_blank"
             rel="noreferrer"
             className="tap inline-flex items-center gap-2 rounded-full bg-accent px-4 py-2 text-xs font-extrabold text-accent-foreground shadow-glow-accent transition-transform duration-300 hover:scale-[1.03] sm:text-sm"
           >
             <MessageCircle className="size-4" aria-hidden />
-            <span className="hidden sm:inline">(19) 99737-6030</span>
+            <span className="hidden sm:inline">(19) 99818-8149</span>
             <span className="sm:hidden">Corrida</span>
           </a>
         </div>
@@ -456,7 +456,7 @@ function Index() {
                         rel="noreferrer"
                         className="font-bold text-foreground underline decoration-accent underline-offset-4"
                       >
-                        (19) 99737-6030
+                        (19) 99818-8149
                       </a>
                     </p>
                     <ul className="mt-3">
